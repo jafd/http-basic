@@ -268,11 +268,7 @@ function request(method, url, options, callback) {
   if (options.timeout) {
     setTimeout(onTimeout, options.timeout);
   }
-  if (duplex) {
-    return req;
-  } else {
-    req.end();
-  }
+  return req;
 }
 
 function isRedirect(statusCode) {
